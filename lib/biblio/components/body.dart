@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../components/item.dart';
-
 class Body extends StatefulWidget {
   @override
   _BodyState createState() => _BodyState();
@@ -10,11 +8,7 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        TlItem(),
-      ],
-    );
+    return Column();
     //Container(
     //   height: 200,
     //   width: 400,

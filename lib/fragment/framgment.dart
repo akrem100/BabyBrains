@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                       child: Text(
                         "Welcome Sarah !",
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 25),
+                            fontWeight: FontWeight.w900, fontSize: 24),
                       ),
                     ),
                     Padding(
@@ -103,29 +103,36 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      width: 160,
-                      height: 50,
-                      child: const Center(
-                          child: Text(
-                        'Activities',
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
-                      )),
-                      decoration: BoxDecoration(
-                          color: Colors.pink,
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(width: 1, color: Colors.pink)),
+                    InkWell(
+                      hoverColor: Colors.black,
+                      onTap: () => {},
+                      child: Container(
+                          width: 160,
+                          height: 45,
+                          child: const Center(
+                              child: Text(
+                            'Activities',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          )),
+                          decoration: ShapeDecoration(
+                              color: Colors.pink[300],
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  side: BorderSide(
+                                      width: 0.1, color: Colors.pink)))),
                     ),
                     Container(
-                      width: 160,
-                      height: 50,
-                      child: const Center(child: Text("Inforamtions")),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                          border: Border.all(width: 1, color: Colors.black)),
-                    ),
+                        width: 160,
+                        height: 45,
+                        child: const Center(child: Text("Inforamtions")),
+                        decoration: ShapeDecoration(
+                            color: Colors.white,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(6),
+                                side: BorderSide(
+                                    width: 1, color: Colors.black)))),
                   ],
                 ),
               ],

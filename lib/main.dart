@@ -1,15 +1,6 @@
-import 'dart:async';
-
-import 'package:dot/biblio/biblio_screen.dart';
-import 'package:dot/constant.dart';
-
-import 'package:dot/route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/animation.dart';
-import 'components/dot_anim.dart';
 import 'fragment/framgment.dart';
-import 'home/home_screen.dart';
-import 'package:flutter/animation.dart';
+import 'route.dart';
 
 void main() => runApp(const MyApp());
 

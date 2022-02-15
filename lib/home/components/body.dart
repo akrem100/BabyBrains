@@ -1,6 +1,3 @@
-import 'package:dot/constant.dart';
-
-import 'package:dot/home/components/timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,7 +5,7 @@ import 'package:timeline_tile/timeline_tile.dart';
 import 'package:timelines/timelines.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../components/item.dart';
+import 'timeline.dart';
 
 class Body extends StatefulWidget {
   @override

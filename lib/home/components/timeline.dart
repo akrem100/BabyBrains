@@ -1,7 +1,8 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_highlight/themes/xcode.dart';
+
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:intl/intl.dart';
 
 class TimeLineItem extends StatefulWidget {
   const TimeLineItem({
@@ -14,9 +15,11 @@ class TimeLineItem extends StatefulWidget {
 
 class _TlItemState extends State<TimeLineItem> {
   bool isCheked = false;
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    var ar = DateTime.now();
     return Column(
       children: [
         Row(
@@ -33,8 +36,8 @@ class _TlItemState extends State<TimeLineItem> {
                       border: Border.all(
                           width: 2, color: Color.fromRGBO(235, 113, 170, 2)),
                     ))),
-            const Text(
-              "30.5.2022",
+            Text(
+              ar.toString(),
               style: TextStyle(fontWeight: FontWeight.bold),
             )
           ],
