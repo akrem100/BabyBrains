@@ -47,6 +47,8 @@ dependencies:
   dotted_line: ^3.1.0
   intl: ^0.17.0
   auto_route: ^3.2.2
+  animate_icons: ^2.0.0
+  flare_loading: ^3.0.0
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:flare_flutter/flare.dart';
+import 'package:flare_flutter/flare_actor.dart';
 import '../biblio/biblio_screen.dart';
 import '../components/dot_anim.dart';
 import '../home/home_screen.dart';
@@ -149,47 +150,50 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             BottomNavigationBar(
-              items: const <BottomNavigationBarItem>[
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.home,
-                    color: Colors.black,
+                type: BottomNavigationBarType.fixed,
+                items: const <BottomNavigationBarItem>[
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.home,
+                      color: Colors.black,
+                    ),
+                    label: ' ',
                   ),
-                  label: 'cart',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.business,
-                    color: Colors.black,
+                  BottomNavigationBarItem(
+                    backgroundColor: Colors.yellow,
+                    icon: Icon(
+                      Icons.library_add,
+                      color: Colors.black,
+                    ),
+                    label: ' ',
                   ),
-                  label: 'formule',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.school,
-                    color: Colors.black,
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.school,
+                      color: Colors.black,
+                    ),
+                    label: ' ',
                   ),
-                  label: 'promotion',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.settings,
-                    color: Colors.black,
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.settings,
+                      color: Colors.black,
+                    ),
+                    label: ' ',
                   ),
-                  label: 'panier',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.account_balance_rounded,
-                    color: Colors.black,
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.account_balance_rounded,
+                      color: Colors.black,
+                    ),
+                    label: ' ',
                   ),
-                  label: 'panier',
-                ),
-              ],
-              currentIndex: _selectedIndex,
-              selectedItemColor: Colors.black,
-              onTap: _onItemTapped,
-            ),
+                ],
+                currentIndex: _selectedIndex,
+                onTap: _onItemTapped,
+                selectedIconTheme: IconThemeData(
+                  color: Colors.yellow,
+                )),
             Dot_anim(
                 ccontroller: ccontroller,
                 sizeAnimation: sizeAnimation,
